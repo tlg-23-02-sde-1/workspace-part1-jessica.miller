@@ -38,5 +38,9 @@ class HRClient {
         // make its Employees work
         System.out.println("\nMake employees work:");
         dept.workEmployees();
+
+        //pay employees
+        System.out.println("\nPay employees please:");
+        dept.payEmployees();
     }
 }

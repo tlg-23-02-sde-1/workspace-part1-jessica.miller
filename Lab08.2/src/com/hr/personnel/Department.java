@@ -31,9 +31,11 @@ public class Department {
 
     // constructors
     public Department() {
+        super(); //always there even if you leave it out
     }
 
     public Department(String name, String location) {
+        super(); //always there
         setName(name);
         setLocation(location);
     }
@@ -83,6 +85,8 @@ public class Department {
         this.location = location;
     }
 
+    //to string
+    @Override
     public String toString() {
         return "Department: name=" + getName() + ", location=" + getLocation();
     }
