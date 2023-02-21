@@ -31,7 +31,7 @@ public class Department {
 
     // constructors
     public Department() {
-        super(); //always there even if you leave it out
+        super(); //IS always there even if you leave it out
     }
 
     public Department(String name, String location) {
@@ -58,6 +58,28 @@ public class Department {
     public void payEmployees() {
         for (int i = 0; i < currentIndex; i++) {
             employees[i].pay();
+        }
+    }
+
+    /*TOPIC INSTANCEOF KEYWORD EXAMPLE
+    * Forced vacation. That is for all employees that take vacation.
+    * Make them take vacation. How can we find out what exact type we have here???
+    * Istanceof is an IS-A check
+    * */
+    public void holidayBreak() {
+        for (int i = 0; i < currentIndex; i++) {
+            //First, we ask employee if they are salaried or hourly
+            if (employees[i] instanceof SalariedEmployee) {
+                //downcast and method call all in one
+                //((SalariedEmployee) employees[i]).takeVacation();
+
+
+                //downcast the employee reference to specific type SalariedEmployee
+                SalariedEmployee semp = (SalariedEmployee) employees[i];
+                //then we can salariedEmployee specific methods (take vacation())
+                semp.takeVacation();
+            }
+
         }
     }
 
