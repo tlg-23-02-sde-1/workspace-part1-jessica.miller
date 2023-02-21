@@ -21,6 +21,7 @@ public class IRS {
     public void collectTaxes() {
         for (int i = 0; i < currentIndex; i++) {
             payers[i].payTaxes();
+//            payers[i].getName();
         }
     }
     
@@ -30,3 +31,11 @@ public class IRS {
         payers[currentIndex++] = payer;
     }
 }
+
+/*
+* Corporation Corporation, TaxPayer, Object
+* IRS   IRS, Object
+* Employee  employee taxpayer object
+* SalariedEmployee  SE employee taxpayer object
+* HourlyEmployee    HE employee taxpayer obect
+* */
