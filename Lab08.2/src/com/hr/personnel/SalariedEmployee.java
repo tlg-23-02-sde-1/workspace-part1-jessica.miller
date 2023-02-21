@@ -18,10 +18,15 @@ public class SalariedEmployee extends Employee {
         setSalary(salary);
     }
 
+//    @Override
+//    public void moveTo() {
+//
+//    }
+
     //business method
     @Override
     public void pay() {
-        System.out.println(getName() + " is pad salary " + getSalary());
+        System.out.println(getName() + " is paid salary " + getSalary());
     }
 
     //Accessor methods
