@@ -36,7 +36,12 @@ public class SalariedEmployee extends Employee {
     }
 
     public void payTaxes() {
-        System.out.println(getName() + SALARIED_TAX_RATE * getSalary());
+        System.out.println(getName() + " paid taxes of " + SALARIED_TAX_RATE * getSalary());
+    }
+
+    @Override
+    public void fileReturn() {
+        System.out.println("Return filed electronically");
     }
 
     //Accessor methods
