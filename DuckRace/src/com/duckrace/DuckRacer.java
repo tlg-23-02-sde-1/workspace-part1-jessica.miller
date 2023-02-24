@@ -2,6 +2,7 @@ package com.duckrace;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 class DuckRacer {
@@ -39,8 +40,9 @@ class DuckRacer {
        return rewards.size();
     }
 
+    //We are returning a read-only view of our List<Reward>
     public List<Reward> getRewards() {
-        return rewards;
+        return Collections.unmodifiableList(rewards);
     }
 
     //toString
